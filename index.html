@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/747fac2143.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>ROI Calculator</title>
+	<style>
+		.mainbody {
+			width: 25%;
+			margin: auto;
+			background-color: white;
+			border: 1px solid black;
+			border-radius: 4px;
+			box-shadow: 0px 0px 10px 10px grey;
+		}
+
+		.main {
+			margin: 10px;
+		}
+
+		.header {
+			display: flex;
+		}
+
+		.header>h1 {
+			width: 25%;
+		}
+
+		.header>i {
+			display: flex;
+			justify-content: flex-end;
+			width: 55%;
+			margin: 20px;
+			/* color: grey; */
+		}
+
+		.cusd {
+			display: flex;
+			justify-content: flex-end;
+			margin-bottom: 4px;
+		}
+
+		.cusd>p {
+			margin: 0px 2px 0px 2px;
+		}
+
+		i {
+			color: grey;
+		}
+
+		.cake {
+			color: aqua;
+		}
+
+		.input1 {
+			display: flex;
+			justify-content: flex-end;
+			border: 0.5px solid black;
+			border-radius: 6px;
+			background-color: #ebebeb;
+			font-weight: 900;
+			font-size: larger;
+		}
+
+		.input1>h4 {
+			margin: 20px;
+		}
+
+		.container {
+			display: flex;
+			justify-content: space-around;
+			flex-basis: auto;
+			margin: 10px;
+		}
+
+		.active {
+			background-color: rgb(233 233 159);
+			padding: 8px;
+			border-radius: 30px;
+			display: flex;
+			justify-content: center;
+		}
+
+		.NA {
+			background-color: rgb(233 233 233);
+			padding: 8px;
+			border-radius: 30px;
+			width: 65px;
+			display: flex;
+			justify-content: center;
+		}
+
+		.smallcase {
+			font-size: x-small;
+		}
+
+		.cont1 {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.cont1>i {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			color: grey;
+		}
+
+		.end {
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		.input2 {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border: 0.5px solid black;
+			border-radius: 6px;
+			background-color: #ebebeb;
+		}
+
+		.input2>i {
+			margin-left: 25px;
+
+		}
+
+		.input2>p {
+			margin-right: 25px;
+		}
+
+		.button {
+			display: flex;
+			justify-content: center;
+		}
+
+		.btn {
+
+			width: 209px;
+			margin: auto;
+			padding: 10px;
+			border-radius: 10px;
+		}
+
+		#btn1 {
+			background-color: black;
+			color: white;
+		}
+
+		.center {
+			align-items: center;
+		}
+
+		#show-hide {
+			display: flex;
+			justify-content: center;
+			width:150px;
+			margin: 20px auto 20px auto;
+		}
+
+		.num {
+			color: orange;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="mainbody">
+		<div class="main">
+			<div class="header">
+				<h2>ROI Calculator</h2>
+				<i class="fa-solid fa-xmark"></i>
+			</div>
+			<div class="cusd">
+				<p><i class="fas fa-cake-candles cake"></i> Cake</p>
+				<p><i class="fa-solid fa-toggle-on"></i> $USD</p>
+			</div>
+			<div class="input1">
+				<h4><b>2.100 Cake</b></h4>
+			</div>
+			<div class="container">
+				<div class="active">Use Balance</div>
+				<div class="NA">$500</div>
+				<div class="NA">$100</div>
+				<div></div>
+				<div class="smallcase"> ~$20.82</div>
+
+			</div>
+			<section class="timeframe">
+				<p>Timeframe</p>
+				<div class="container">
+					<div class="NA">1 Day</div>
+					<div class="active">7 Days</div>
+					<div class="NA">30 Days</div>
+					<div class="NA">1 Year</div>
+					<div class="NA">5 Years</div>
+				</div>
+			</section>
+			<section class="apysection">
+				<div class="cont1">
+					<h3>Enable Accelerated APY</h3>
+					<i class="fa-solid fa-toggle-on"></i>
+				</div>
+				<div class="container">
+					<div class="NA">Tier 1</div>
+					<div class="NA">Tier 2</div>
+					<div class="NA">Tier 3</div>
+					<div class="active">Tier 4</div>
+					<div class="NA">Tier 5</div>
+				</div>
+			</section>
+			<section>
+				<p class="end">ROI at Current Rates</p>
+				<div class="input2">
+					<i class="fa-thin fa-pencil"></i>
+					<p>0.00 USD</p>
+				</div>
+			</section>
+			<p class="end">~ 0.00 CAKE + 0.000 DON</p>
+			<div class="button">
+				<button id="btn1" class="btn">Apply</button>
+				<button id="btn2" class="btn">Cancel</button>
+			</div>
+			<section class="showhide">
+				<span id="show-hide" class="center">Show/Hide Details <i class="fa-solid fa-angle-down"></i></span>
+				<article>
+					<div class="cont1">
+						<h3>APY</h3>
+						<h3 class="num">63.4%</h3>
+					</div>
+					<ul>
+						<li>Calculated based on current rates</li>
+						<li>All figures are estimates provided for your convenience only, and by no means represent
+							guranteed returns.</li>
+					</ul>
+				</article>
+			</section>
+		</div>
+	</div>
+</body>
+<script>
+	$(document).ready(function () {
+		$("#show-hide").click(function () {
+			$("article").slideToggle();
+		});
+	});
+</script>
+
+</html>
