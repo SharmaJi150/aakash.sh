@@ -1,0 +1,187 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: cursive;
+	overflow-x: hidden;
+  }
+
+  /* styling my navigation bar */
+  
+  .navbar {
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	display: flex;
+	background-color: rgb(56 56 135);
+	width:100%;
+	border-radius: 0 0 5px 5px;
+	margin: 0;
+	height: 70px;
+  }
+  
+  .navbar > ul {
+	display: flex;
+	justify-content: flex-start;
+	margin: 10px auto;
+  }
+  
+  .navbar li {
+	list-style: none;
+	margin: auto 30px;
+	font-size: medium;
+  }
+  
+  .navbar li a {
+	padding: 11px;
+	font-size: 1.2em;
+	display: block;
+	text-decoration: none;
+	color: #ffffff;
+  }
+
+  .navbar li a:hover {
+	padding: 11px;
+	font-size: 1.2em;
+	display: block;
+	text-decoration: none;
+	color: #000000;
+  }
+
+  .nav-width{
+	padding: 0;
+  }
+
+  .logo>img{
+	border-radius: 50%;
+  }
+
+
+  /* styling my greeting section  */
+
+  
+  .welcome-section {
+	height: 100vh;
+	background-color: #c2c2f3;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* width: 100%; */
+	margin: 0;
+	text-align: center;
+	font-size: 3em;
+  }
+
+  .animation-1 {
+	animation-name: sliding-1;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	width: 50%;
+	margin: 0 auto 0 auto;
+
+}
+
+	@keyframes sliding-1 {
+		0% {
+			font-size: large;
+			text-shadow: 5px 3px 5px;
+		}
+
+		50% {
+			font-size: xx-large;
+			text-shadow: 5px 3px 10px goldenrod;
+		}
+
+		100% {
+			font-size: large;
+			text-shadow: 5px 3px 15px;
+		}
+
+		50% {
+			font-size: xx-large;
+			text-shadow: 5px 3px 10px goldenrod;
+		}
+
+		0% {
+			font-size: large;
+			text-shadow: 5px 3px 5px;
+		}
+	
+	}
+
+  
+  /* styling my project section */
+
+ 	#projects {
+		background-color: rgb(250 235 215);
+		}
+ 
+  
+	#projects > h1 {
+		text-align: center;
+		font-size: 3em;
+		padding: 36px;
+		margin-top: 0%;
+		}
+
+	.head-line{
+		margin: 10x;
+		font-size: 2em;
+		border: 1px solid black;
+	}
+		
+	.font-color{
+		color: #ffffff;
+ 		}
+  
+  .set-img{
+	  position: relative;
+	  padding-top: 60px;
+  }
+  
+   .bg-color{ 
+	background-color: #c2c2f3;
+	margin: 0 auto 30px;
+	font-size: medium;
+  }  
+  
+  /* styling my my resume */
+  .heading-bg-color{ 
+	background-color: rgb(223, 131, 131);
+	padding: 34px;
+  }  
+  
+
+ .centered-cv{
+		  margin:auto;
+		  display: block;
+		 
+	  }
+
+ .brdr{
+		width: 70rem;
+		border: 2px solid black;
+	}
+  
+  	/* styling my contact section */
+
+  #Contact-Me {
+	background-color: #c2c2f3;
+	text-align: center;
+	font-size: 20px;
+	height: 100%;
+  }
+
+  
+  .profile-link {
+	width: 600px;
+	margin: 25px auto;
+	display: block;
+  }
+  
+  #profile-links > a{
+	text-decoration: none;
+	font-size: 25px;
+	display: block;
+  }
+ 
